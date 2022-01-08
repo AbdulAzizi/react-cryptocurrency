@@ -1,7 +1,7 @@
 import React from "react";
 // import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, useLocation, Link, Route, Routes } from "react-router-dom";
-import { Avatar, Layout, List, Menu } from "antd";
+import { Avatar, Layout, List, Menu, Space, Typography } from "antd";
 import { HomeOutlined, FundOutlined, MoneyCollectOutlined, BulbOutlined } from "@ant-design/icons";
 import Home from "./pages/Home";
 import Exchanges from "./pages/Exchanges";
@@ -55,7 +55,18 @@ const App = () => {
 							<Route path="/news" element={<News />} />
 						</Routes>
 					</Content>
-					<Footer>Footer</Footer>
+					<Footer style={{ textAlign: "center" }}>
+						<Typography.Title level={5}>
+							Cryptocurrency
+							<br />
+							All rights reserved
+						</Typography.Title>
+						<Space>
+							<Link to="/">Home</Link>
+							<Link to="/exchanges">Exchanges</Link>
+							<Link to="/news">News</Link>
+						</Space>
+					</Footer>
 				</Layout>
 			</Layout>
 		</Router>
