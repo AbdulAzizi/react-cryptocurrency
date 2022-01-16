@@ -30,7 +30,7 @@ const App = () => {
 					</List.Item>
 				</List>
 				<Menu theme="dark" defaultSelectedKeys={[window.location.pathname]}>
-					<Menu.Item key="/home" icon={<HomeOutlined />}>
+					<Menu.Item key="/" icon={<HomeOutlined />}>
 						<Link to="/">Home</Link>
 					</Menu.Item>
 					<Menu.Item key="/cryptocurrencies" icon={<FundOutlined />}>
@@ -45,7 +45,7 @@ const App = () => {
 				</Menu>
 			</Sider>
 			<Layout>
-				<Content>
+				<Content style={{ margin: "20px" }}>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/exchanges" element={<Exchanges />} />
