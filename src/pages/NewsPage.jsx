@@ -1,7 +1,7 @@
 import React from "react";
 
-function News() {
+function NewsPage() {
 	return <div>News</div>;
 }
 
-export default News;
+export default NewsPage;

@@ -5,7 +5,7 @@ import { useGetCryptosQuery } from "../services/cryptoApi";
 import millify from "millify";
 import Cryptocurrencies from "../components/Cryptocurrencies";
 
-function Home() {
+function HomePage() {
 	const { data, isFetching } = useGetCryptosQuery(10);
 	const stats = data?.data?.stats;
 	if (isFetching) return "Loading...";
@@ -43,4 +43,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default HomePage;

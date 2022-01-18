@@ -1,13 +1,18 @@
 import { Card, Col, Row } from "antd";
 import millify from "millify";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 function Cryptocurrencies({ itemsNumber }) {
 	const { data, isFetching } = useGetCryptosQuery(itemsNumber || 10);
-	const [cryptos, setCryptos] = useState(data?.data?.coins);
+	const [cryptos, setCryptos] = useState([]);
+	console.log(cryptos);
 	if (isFetching) return "Loading...";
+	else if (cryptos.length == 0) {
+		setCryptos(data?.data?.coins);
+	}
+
 	return (
 		<>
 			<Row gutter={[32, 32]}>

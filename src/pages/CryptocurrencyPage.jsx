@@ -1,7 +1,7 @@
 import React from "react";
 
-function Cryptocurrency() {
+function CryptocurrencyPage() {
 	return <div>Cryptocurrency Page</div>;
 }
 
-export default Cryptocurrency;
+export default CryptocurrencyPage;

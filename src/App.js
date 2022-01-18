@@ -3,11 +3,11 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { Avatar, Layout, List, Menu, Space, Typography } from "antd";
 import { HomeOutlined, FundOutlined, MoneyCollectOutlined, BulbOutlined } from "@ant-design/icons";
-import Home from "./pages/Home";
-import Exchanges from "./pages/Exchanges";
-import Cryptocurrencies from "./pages/Cryptocurrencies";
-import Cryptocurrency from "./pages/Cryptocurrency";
-import News from "./pages/News";
+import HomePage from "./pages/HomePage";
+import ExchangesPage from "./pages/ExchangesPage";
+import CryptocurrenciesPage from "./pages/CryptocurrenciesPage";
+import CryptocurrencyPage from "./pages/CryptocurrencyPage";
+import NewsPage from "./pages/NewsPage";
 
 const { Footer, Sider, Content } = Layout;
 
@@ -47,11 +47,11 @@ const App = () => {
 			<Layout>
 				<Content style={{ margin: "20px" }}>
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/exchanges" element={<Exchanges />} />
-						<Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
-						<Route path="/cryptocurrencies/:id" element={<Cryptocurrency />} />
-						<Route path="/news" element={<News />} />
+						<Route path="/" element={<HomePage />} />
+						<Route path="/exchanges" element={<ExchangesPage />} />
+						<Route path="/cryptocurrencies" element={<CryptocurrenciesPage />} />
+						<Route path="/cryptocurrencies/:id" element={<CryptocurrencyPage />} />
+						<Route path="/news" element={<NewsPage />} />
 					</Routes>
 				</Content>
 				<Footer style={{ textAlign: "center" }}>
