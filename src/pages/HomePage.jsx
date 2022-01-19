@@ -4,6 +4,7 @@ import React from "react";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import millify from "millify";
 import Cryptocurrencies from "../components/Cryptocurrencies";
+import { Link } from "react-router-dom";
 
 function HomePage() {
 	const { data, isFetching } = useGetCryptosQuery(10);
@@ -32,9 +33,12 @@ function HomePage() {
 					<Statistic title="Total Markets" value={millify(stats.totalMarkets)} />
 				</Col>
 			</Row>
-			<Row justify="space-between" align="middle">
+			<Row style={{ marginTop: "30px" }} justify="space-between" align="middle">
 				<Title level={2}>Top 10 Cryptocurrencies in the world</Title>
-				<Button type="link">Show more</Button>
+
+				<Link className="ant-btn ant-btn-link" to="/cryptocurrencies">
+					Show more
+				</Link>
 			</Row>
 			<Row justify="space-between" align="middle">
 				<Cryptocurrencies itemsNumber={10} />
