@@ -40,9 +40,8 @@ function HomePage() {
 					Show more
 				</Link>
 			</Row>
-			<Row justify="space-between" align="middle">
-				<Cryptocurrencies itemsNumber={10} />
-			</Row>
+
+			<Cryptocurrencies itemsNumber={10} />
 		</>
 	);
 }
